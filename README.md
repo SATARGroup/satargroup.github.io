@@ -38,3 +38,14 @@ All collected inquiry data (Name, Email, Subject, Message) can be accessed and m
 ├── theme.js             # Logic for Dark/Light mode and dynamic logo
 ├── darklogo.png         # Logo for Dark Mode
 └── lightlogo.png        # Logo for Light Mode
+
+## 💻 How to Run Locally
+
+Since this is a static website, no server installation is required.
+
+1. Clone or download the repository.
+2. Open `index.html` in any modern web browser (Chrome, Firefox, Safari, Edge).
+3. Ensure JavaScript is enabled in your browser to test the Theme Toggle and Resource Vault.
+
+---
+*Developed for SATAR Group, 2026.*
