@@ -58,8 +58,8 @@ body {
 
     /* 1. হালকা গ্রিড প্যাটার্ন (খুবই সূক্ষ্ম ৪% অপাসিটি) */
     background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to right, rgba(255, 255, 255, 0.065) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.065) 1px, transparent 1px),
         /* 2. নিউট্রনিক্স কোর গ্লো (সেন্টারে খুব হালকা অরা) */
         radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
     
