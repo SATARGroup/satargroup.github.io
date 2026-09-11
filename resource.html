@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | SATAR Group</title>
+    <link rel="stylesheet" href="style.css?v=bw1">
+    <style>
+        .access-box {
+            max-width: 520px;
+            margin: 2rem auto 5rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .access-input {
+            width: 100%;
+            background: #000;
+            border: 1px solid var(--border);
+            padding: 0.85rem;
+            border-radius: 4px;
+            color: #fff;
+            text-align: center;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            margin: 1.5rem 0 1rem;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .access-input:focus {
+            border-color: var(--border-hover);
+        }
+
+        body.light-theme .access-input,
+        body.light-mode .access-input {
+            background: #fff;
+            color: #000;
+        }
+
+        .hint-text {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="brand">
+                <img src="Slogo.png" alt="Logo">
+                <span>SATAR Group</span>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">&#9776;</button>
+
+            <ul class="nav-links" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="resource.html" class="active">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button class="theme-toggle-btn" id="themeBtn">☀ Light</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="page-intro" style="text-align: center;">
+            <div class="badge">Protected Vault</div>
+            <h1 class="page-title">Lab Resources & Data</h1>
+            <p class="lead-text" style="margin: 0 auto;">
+                Looking for internal research datasets or computational tools? Enter the authorized passkey below to access the repository.
+            </p>
+        </section>
+
+        <!-- Passcode Prompt Box -->
+        <div class="access-box">
+            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem;">Enter Passkey</h3>
+            <p class="hint-text">Provide the secret access key to decrypt and enter the directory.</p>
+
+            <form id="vaultForm">
+                <input type="password" id="secretCode" class="access-input" placeholder="••••••••" required autocomplete="off">
+                <button type="submit" class="btn" style="width: 100%;">Unlock Directory &rarr;</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 SATAR Group. Department of Nuclear Engineering.</p>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        const form = document.getElementById('vaultForm');
+        const codeInput = document.getElementById('secretCode');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const userCode = codeInput.value.trim();
+
+            if (userCode === "putki") {
+                // Correct Code -> Google Drive
+                window.location.href = "https://drive.google.com/drive/folders/1qJglx8ygsIo5C1umfvvO05zAhU-N5COY?usp=sharing";
+            } else {
+                // Incorrect Code -> YouTube Link
+                window.location.href = "https://youtube.com/shorts/chaReGoNGow?si=3erloAqfDOBNyKpp";
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (menuBtn && navMenu) {
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+    <script src="theme.js"></script>
+</body>
+</html>
