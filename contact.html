@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | SATAR Group</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+        }
+        input, textarea {
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 0.8rem;
+            border-radius: 6px;
+            color: #fff;
+            font-family: inherit;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--cyan);
+        }
+        .btn {
+            background: var(--cyan);
+            color: #090d16;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        @media (max-width: 768px) {
+            .contact-layout { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="brand"><span class="brand-dot"></span> SATAR GROUP</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-intro">
+            <div class="badge">Collaboration</div>
+            <h1 class="page-title">Get in Touch</h1>
+            <p class="lead-text">Inquiries about graduate openings, collaborations, or computational code access.</p>
+        </section>
+
+        <div class="contact-layout">
+            <div>
+                <h3 style="font-family: var(--font-display); margin-bottom: 1rem;">Lab Location</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                    SATAR Research Group<br>
+                    Department of Nuclear Engineering<br>
+                    Institutional Campus, Building 04
+                </p>
+                <h3 style="font-family: var(--font-display); margin-bottom: 0.5rem;">Inquiries</h3>
+                <p style="color: var(--text-muted);">contact@satargroup.edu</p>
+            </div>
+
+            <form onsubmit="event.preventDefault(); alert('Message submitted.');">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" required placeholder="Your full name">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required placeholder="academic@institution.edu">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea rows="4" required placeholder="Your research interest or inquiry..."></textarea>
+                </div>
+                <button type="submit" class="btn">Send Inquiry</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container"><p>&copy; 2026 SATAR Group.</p></div>
+    </footer>
+
+</body>
+</html>
