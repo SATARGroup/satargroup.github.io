@@ -86,7 +86,7 @@ header {
 
 .brand {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 3rem !important;  /* সাইজ বড় করা হলো */
+    font-size: 2.2rem !important;  /* সাইজ বড় করা হলো */
     font-weight: 700 !important;
     display: flex;
     align-items: center;
