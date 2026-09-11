@@ -12,7 +12,8 @@
 }
 
 /* Light Mode Colors (উল্টো কালার) */
-body.light-mode {
+body.light-mode,
+body.light-theme {
     --bg: #ffffff;
     --surface: #f4f4f5;
     --border: #e4e4e7;
@@ -68,12 +69,12 @@ body {
     background-attachment: fixed; /* স্ক্রল করলেও গ্রিড স্মুথ থাকবে */
 }
 
-
-/* লাইট মোডের জন্য গ্রিড অটোমেটিক কালো রেখায় শিফট হবে */
+/* লাইট মোডের জন্য গ্রিড অটোমেটিক কালো রেখায় শিফট হবে */
+body.light-mode,
 body.light-theme {
     background-image: 
-        linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
         radial-gradient(circle at 50% 15%, rgba(0, 0, 0, 0.02) 0%, transparent 60%);
 }
 
@@ -108,7 +109,7 @@ header {
 
 .brand {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 2.2rem !important;  /* সাইজ বড় রাখা হয়েছে */
+    font-size: 2.2rem !important;  /* সাইজ বড় রাখা হয়েছে */
     font-weight: 700 !important;
     display: flex;
     align-items: center;
@@ -406,52 +407,84 @@ footer {
         grid-template-columns: 1fr; 
     }
 }
+
 /* ===================================================
    LIGHT MODE OVERRIDES FOR CARDS, TEXT & PEOPLE PAGE
    =================================================== */
-body.light-mode h1,
-body.light-mode h2,
-body.light-mode h3,
-body.light-mode .profile-title h3,
-body.light-mode .section-label,
-body.light-mode .brand span {
-    color: #000000 !important; /* সব সাদা হেডিং কালো হবে */
+body.light-mode,
+body.light-theme {
+    background-color: #ffffff !important;
+    color: #000000 !important;
 }
 
-body.light-mode .card,
-body.light-mode .profile-card,
-body.light-mode .pi-box {
-    background: #ffffff !important; /* কার্ডের ব্যাকগ্রাউন্ড পিওর হোয়াইট */
+body.light-mode h1, body.light-theme h1,
+body.light-mode h2, body.light-theme h2,
+body.light-mode h3, body.light-theme h3,
+body.light-mode .profile-title h3,
+body.light-mode .section-label,
+body.light-mode .brand span,
+body.light-mode .pub-year,
+body.light-mode .pub-title {
+    color: #000000 !important; /* সব হেডিং এবং টাইটেল পিওর কালো হবে */
+}
+
+body.light-mode .card, body.light-theme .card,
+body.light-mode .profile-card, body.light-theme .profile-card,
+body.light-mode .pi-box, body.light-theme .pi-box {
+    background: #ffffff !important; /* কার্ডের ব্যাকগ্রাউন্ড পিওর হোয়াইট */
     border-color: #e4e4e7 !important;
 }
 
-body.light-mode .profile-card:hover,
-body.light-mode .card:hover {
+body.light-mode .profile-card:hover, body.light-theme .profile-card:hover,
+body.light-mode .card:hover, body.light-theme .card:hover {
     border-color: #000000 !important;
 }
 
-body.light-mode .profile-focus,
-body.light-mode .pub-meta,
-body.light-mode p {
+body.light-mode .profile-focus, body.light-theme .profile-focus,
+body.light-mode .pub-meta, body.light-theme .pub-meta,
+body.light-mode p, body.light-theme p {
     color: #4b5563 !important; /* ফোকাস ও বডি টেক্সট রিডেবল ডার্ক গ্রে */
 }
 
 /* প্রোফাইল লিংক / বাটনগুলো ফিক্স */
-body.light-mode .profile-links a {
+body.light-mode .profile-links a,
+body.light-theme .profile-links a {
     color: #000000 !important;
     border-color: #d1d5db !important;
     background: #f9fafb !important;
 }
 
-body.light-mode .profile-links a:hover {
+body.light-mode .profile-links a:hover,
+body.light-theme .profile-links a:hover {
     background: #000000 !important;
     color: #ffffff !important;
     border-color: #000000 !important;
 }
 
 /* ট্যাগ ও ব্যাজ */
-body.light-mode .tag,
-body.light-mode .badge {
+body.light-mode .tag, body.light-theme .tag,
+body.light-mode .badge, body.light-theme .badge {
     border-color: #d1d5db !important;
     color: #111827 !important;
+}
+
+/* ইনপুট ফিল্ড ও বাটন ফিক্স */
+body.light-mode input, body.light-theme input,
+body.light-mode textarea, body.light-theme textarea {
+    background: #ffffff !important;
+    border-color: #d1d5db !important;
+    color: #000000 !important;
+}
+
+body.light-mode .btn,
+body.light-theme .btn {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border-color: #000000 !important;
+}
+
+body.light-mode .btn:hover,
+body.light-theme .btn:hover {
+    background: transparent !important;
+    color: #000000 !important;
 }
