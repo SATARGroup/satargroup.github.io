@@ -38,6 +38,7 @@ All collected inquiry data (Name, Email, Subject, Message) can be accessed and m
 ├── theme.js             # Logic for Dark/Light mode and dynamic logo
 ├── darklogo.png         # Logo for Dark Mode
 └── lightlogo.png        # Logo for Light Mode
+```text
 
 ## 💻 How to Run Locally
 
