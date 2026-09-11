@@ -55,6 +55,7 @@ body {
     display: flex;
     flex-direction: column;
 
+    
     /* 1. হালকা গ্রিড প্যাটার্ন (খুবই সূক্ষ্ম ৪% অপাসিটি) */
     background-image: 
         linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
