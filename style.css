@@ -84,23 +84,20 @@ header {
     height: 70px;
 }
 
-/* Brand Logo & Larger Title */
 .brand {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 5rem; /* ফন্ট সাইজ বাড়িয়ে 1.6rem করা হয়েছে */
-    font-weight: 1200;
-    letter-spacing: -0.5px;
+    font-size: 3rem !important;  /* সাইজ বড় করা হলো */
+    font-weight: 700 !important;
     display: flex;
     align-items: center;
-    gap: 12px; /* লোগো এবং লেখার মধ্যকার ফাঁকা জায়গা */
-    color: var(--text-white);
+    gap: 15px;
+    color: #ffffff !important;
 }
 
-.brand-logo {
-    height: 38px; 
+.brand img {
+    height: 50px !important;  /* লোগোর উচ্চতা */
     width: auto;
     object-fit: contain;
-    display: block;
 }
 
 .nav-links {
