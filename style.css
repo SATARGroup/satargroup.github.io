@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
 
+/* Dark Mode Colors (Default) */
 :root {
     --bg: #000000;
     --surface: #0a0a0a;
@@ -8,6 +9,34 @@
     --text-white: #ffffff;
     --text-muted: #888888;
     --text-dim: #444444;
+}
+
+/* Light Mode Colors */
+body.light-mode {
+    --bg: #ffffff;
+    --surface: #f4f4f5;
+    --border: #e4e4e7;
+    --border-hover: #000000;
+    --text-white: #000000;
+    --text-muted: #52525b;
+    --text-dim: #a1a1aa;
+}
+
+/* Theme Toggle Button Style */
+.theme-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-white);
+    padding: 0.35rem 0.75rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-btn:hover {
+    border-color: var(--border-hover);
 }
 
 * {
