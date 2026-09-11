@@ -31,7 +31,6 @@
     <main class="container">
         <section class="page-intro">
             <h1 class="page-title">Get in Touch</h1>
-            <p class="(কাছে আসতে চাও?)</p>
             <p class="lead-text">Inquiries regarding research positions, technical collaborations, or code access.</p>
         </section>
 
@@ -45,18 +44,19 @@
                 <p style="color: var(--text-muted);">satargroup@proton.me</p>
             </div>
 
-            <form onsubmit="event.preventDefault(); alert('Message submitted.');">
+            <!-- Formspree Integration -->
+            <form action="https://formspree.io/f/xjyvzzwz" method="POST">
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" required placeholder="Your full name">
+                    <input type="text" name="name" required placeholder="Your full name">
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" required placeholder="your_mail@something.com">
+                    <input type="email" name="email" required placeholder="your_mail@something.com">
                 </div>
                 <div class="form-group">
                     <label>Message</label>
-                    <textarea rows="4" required placeholder="Maybe a cup of coffee...."></textarea>
+                    <textarea name="message" rows="4" required placeholder="Maybe a cup of coffee...."></textarea>
                 </div>
                 <button type="submit" class="btn">Send Inquiry</button>
             </form>
@@ -66,15 +66,16 @@
     <footer>
         <div class="container"><p>&copy; 2026 SATAR Group.</p></div>
     </footer>
-<script>
-    const menuBtn = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
 
-    if(menuBtn && navMenu) {
-        menuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    }
+<script>
+    const menuBtn = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if(menuBtn && navMenu) {
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
 </script>
 </body>
 </html>
