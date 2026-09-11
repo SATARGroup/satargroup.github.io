@@ -90,12 +90,12 @@ header {
     font-weight: 700 !important;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 13px;
     color: #ffffff !important;
 }
 
 .brand img {
-    height: 50px !important;  /* লোগোর উচ্চতা */
+    height: 45px !important;  /* লোগোর উচ্চতা */
     width: auto;
     object-fit: contain;
 }
