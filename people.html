@@ -5,12 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>People | SATAR Group</title>
     <link rel="stylesheet" href="style.css?v=bw1">
+    <style>
+        /* Team Profile Custom Layout */
+        .lead-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .profile-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .profile-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+        }
+
+        .profile-header {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+
+        .profile-img {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--border);
+            background: #111;
+        }
+
+        .profile-title h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            color: #fff;
+            margin-bottom: 0.2rem;
+        }
+
+        .profile-title span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+        }
+
+        .profile-focus {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1.2rem;
+            flex-grow: 1;
+        }
+
+        /* Academic / Social Links */
+        .profile-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+        }
+
+        .profile-links a {
+            font-size: 0.75rem;
+            color: #ffffff;
+            border: 1px solid var(--border);
+            padding: 0.25rem 0.6rem;
+            border-radius: 3px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .profile-links a:hover {
+            background: #ffffff;
+            color: #000000;
+            border-color: #ffffff;
+        }
+
+        .section-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <div class="container nav-container">
-            <a href="index.html" class="brand"><span class="brand-dot"></span> SATAR GROUP</a>
+            <a href="index.html" class="brand" style="font-size: 1.6rem !important; font-weight: 700;">
+                <img src="Slogo.png" alt="Logo" style="height: 38px; width: auto; vertical-align: middle;">
+                <span>SATAR Group</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="research.html">Research</a></li>
@@ -25,45 +125,143 @@
         <section class="page-intro">
             <div class="badge">Team</div>
             <h1 class="page-title">People</h1>
-            <p class="lead-text">Faculty, researchers, and graduate students behind the SATAR Group.</p>
+            <p class="lead-text">Faculty, lead investigators, and computational nuclear engineering researchers behind the SATAR Group.</p>
         </section>
 
-        <!-- PI Box -->
-        <div class="pi-box">
-            <div class="badge">Principal Investigator</div>
-            <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; margin: 0.5rem 0; color: #fff;">Dr. [Lab Director / PI Name]</h2>
-            <p style="color: var(--text-muted); max-width: 750px; margin-bottom: 1.2rem;">
-                Professor / Head of Research. Specializes in multi-physics simulation architectures, coupled neutron transport dynamics, and reactor materials engineering.
-            </p>
-            <div class="tags">
-                <span class="tag">Email: pi@institution.edu</span>
-                <span class="tag">Google Scholar</span>
-                <span class="tag">ResearchGate</span>
+        <!-- Section 1: Team Leads (2 Members) -->
+        <div class="section-label">Team Leads</div>
+        <div class="lead-grid">
+            
+            <!-- Team Lead 1 -->
+            <div class="profile-card">
+                <div class="profile-header">
+                    <img src="https://via.placeholder.com/150" alt="Lead 1 Photo" class="profile-img">
+                    <div class="profile-title">
+                        <h3>Mohammad Taha Khan</h3>
+                        <span>Team Lead</span>
+                    </div>
+                </div>
+                <p class="profile-focus">
+                    Specializes in high-fidelity neutron transport kinetics, deterministic methods, and core multi-physics simulation.
+                </p>
+                <div class="profile-links">
+                    <a href="https://www.linkedin.com/in/mohammad-taha-khan" target="_blank">LinkedIn &rarr;</a>
+                    <a href="https://www.researchgate.net/profile/Mohammad-Taha-Khan" target="_blank">ResearchGate &rarr;</a>
+                    <a href="https://orcid.org/0009-0000-7215-4170" target="_blank">ORCID &rarr;</a>
+                </div>
             </div>
+
+            <!-- Team Lead 2 -->
+            <div class="profile-card">
+                <div class="profile-header">
+                    <img src="https://via.placeholder.com/150" alt="Lead 2 Photo" class="profile-img">
+                    <div class="profile-title">
+                        <h3>Umme Kulsum Sadia</h3>
+                        <span>Team Lead</span>
+                    </div>
+                </div>
+                <p class="profile-focus">
+                    Focuses on nuclear fuel behavior modeling, radiation-induced material degradation, and extreme-environment cladding analysis.
+                </p>
+                <div class="profile-links">
+                    <a href="https://linkedin.com" target="_blank">LinkedIn &rarr;</a>
+                    <a href="https://scholar.google.com" target="_blank">Google Scholar &rarr;</a>
+                    <a href="https://researchgate.net" target="_blank">ResearchGate &rarr;</a>
+                    <a href="https://orcid.org" target="_blank">ORCID &rarr;</a>
+                </div>
+            </div>
+
         </div>
 
-        <h3 style="font-family: 'Space Grotesk', sans-serif; margin-bottom: 1.5rem; color: #fff;">Researchers & Graduate Students</h3>
-        <div class="grid" style="margin-bottom: 4rem;">
-            <div class="card">
-                <h3>Graduate Researcher 1</h3>
-                <p style="color: #fff; font-size: 0.85rem; margin-bottom: 0.5rem;">PhD Candidate</p>
-                <p>Focus: High-order multi-physics modeling and computational neutron transport.</p>
+        <!-- Section 2: Researchers (4 Members) -->
+        <div class="section-label">Researchers</div>
+        <div class="grid" style="margin-bottom: 5rem;">
+
+            <!-- Researcher 1 -->
+            <div class="profile-card">
+                <div class="profile-header">
+                    <img src="https://via.placeholder.com/150" alt="Researcher 1" class="profile-img">
+                    <div class="profile-title">
+                        <h3>MD. Akib Ahmed Hridoy</h3>
+                        <span>Researcher</span>
+                    </div>
+                </div>
+                <p class="profile-focus">
+                    Investigating Monte Carlo neutronics calculations and coupling frameworks for micro-reactor design.
+                </p>
+                <div class="profile-links">
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    <a href="https://scholar.google.com" target="_blank">Scholar</a>
+                    <a href="https://researchgate.net" target="_blank">ResearchGate</a>
+                    <a href="https://orcid.org" target="_blank">ORCID</a>
+                </div>
             </div>
-            <div class="card">
-                <h3>Graduate Researcher 2</h3>
-                <p style="color: #fff; font-size: 0.85rem; margin-bottom: 0.5rem;">M.Sc. Student</p>
-                <p>Focus: Thermal-hydraulics coupling with reactor physics transients.</p>
+
+            <!-- Researcher 2 -->
+            <div class="profile-card">
+                <div class="profile-header">
+                    <img src="https://via.placeholder.com/150" alt="Researcher 2" class="profile-img">
+                    <div class="profile-title">
+                        <h3>Amlan Roy</h3>
+                        <span>Researcher</span>
+                    </div>
+                </div>
+                <p class="profile-focus">
+                    Simulating thermo-hydraulic feedback mechanisms during operational transients in SMR systems.
+                </p>
+                <div class="profile-links">
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    <a href="https://scholar.google.com" target="_blank">Scholar</a>
+                    <a href="https://researchgate.net" target="_blank">ResearchGate</a>
+                    <a href="https://orcid.org" target="_blank">ORCID</a>
+                </div>
             </div>
-            <div class="card">
-                <h3>Research Assistant</h3>
-                <p style="color: #fff; font-size: 0.85rem; margin-bottom: 0.5rem;">Undergraduate Researcher</p>
-                <p>Focus: Microstructural neutron damage simulations in alloy cladding.</p>
+
+            <!-- Researcher 3 -->
+            <div class="profile-card">
+                <div class="profile-header">
+                    <img src="https://via.placeholder.com/150" alt="Researcher 3" class="profile-img">
+                    <div class="profile-title">
+                        <h3>Antor Das</h3>
+                        <span>Researcher</span>
+                    </div>
+                </div>
+                <p class="profile-focus">
+                    Atomic-scale displacement damage (dpa) and radiation swelling in advanced structural alloys.
+                </p>
+                <div class="profile-links">
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    <a href="https://scholar.google.com" target="_blank">Scholar</a>
+                    <a href="https://researchgate.net" target="_blank">ResearchGate</a>
+                    <a href="https://orcid.org" target="_blank">ORCID</a>
+                </div>
             </div>
+
+            <!-- Researcher 4 -->
+            <div class="profile-card">
+                <div class="profile-header">
+                    <img src="https://via.placeholder.com/150" alt="Researcher 4" class="profile-img">
+                    <div class="profile-title">
+                        <h3>Upama Sarkar</h3>
+                        <span>Researcher</span>
+                    </div>
+                </div>
+                <p class="profile-focus">
+                    Cross-section data evaluation, sensitivity analysis, and high-performance computing solver benchmarking.
+                </p>
+                <div class="profile-links">
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    <a href="https://scholar.google.com" target="_blank">Scholar</a>
+                    <a href="https://researchgate.net" target="_blank">ResearchGate</a>
+                    <a href="https://orcid.org" target="_blank">ORCID</a>
+                </div>
+            </div>
+
         </div>
     </main>
 
     <footer>
-        <div class="container"><p>&copy; 2026 SATAR Group.</p></div>
+        <div class="container"><p>&copy; 2026 SATAR Group. Department of Nuclear Engineering.</p></div>
     </footer>
 
 </body>
