@@ -71,6 +71,7 @@ body {
     background-attachment: fixed; /* স্ক্রল করলেও গ্রিড স্মুথ থাকবে */
 }
 
+
 /* লাইট মোডের জন্য গ্রিড অটোমেটিক কালো রেখায় শিফট হবে */
 body.light-theme {
     background-image: 
