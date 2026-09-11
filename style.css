@@ -49,16 +49,34 @@ body.light-theme {
 }
 
 /* Solid Pure Background (No Grid / No Gradient) */
+/* Engineering Grid + Subtle Radiation Texture */
 body {
-    background-color: var(--bg) !important;
-    background-image: none !important; /* গ্রিড পুরোপুরি রিমুভ করা হয়েছে */
-    color: var(--text-white) !important;
+    background-color: var(--bg);
+    color: var(--text-white);
     font-family: 'Plus Jakarta Sans', sans-serif;
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    transition: background-color 0.2s ease, color 0.2s ease;
+
+    /* 1. হালকা গ্রিড প্যাটার্ন (খুবই সূক্ষ্ম ৪% অপাসিটি) */
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.74) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+        /* 2. নিউট্রনিক্স কোর গ্লো (সেন্টারে খুব হালকা অরা) */
+        radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.06) 0%, transparent 60%);
+    
+    /* গ্রিডের সাইজ (প্রতিটি বক্স 40px বাই 40px) */
+    background-size: 40px 40px, 40px 40px, 100% 100%;
+    background-attachment: fixed; /* স্ক্রল করলেও গ্রিড স্মুথ থাকবে */
+}
+
+/* লাইট মোডের জন্য গ্রিড অটোমেটিক কালো রেখায় শিফট হবে */
+body.light-theme {
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        radial-gradient(circle at 50% 15%, rgba(0, 0, 0, 0.02) 0%, transparent 60%);
 }
 
 a {
