@@ -1,26 +1,26 @@
 const themeBtn = document.getElementById('themeBtn');
 
-// ব্রাউজারে আগে কোনো থিম সেভ করা আছে কি না চেক
-const savedTheme = localStorage.getItem('satar-theme');
-
-if (savedTheme === 'light') {
-    document.body.classList.add('light-mode');
-    if (themeBtn) themeBtn.textContent = '🌙 Dark';
-} else {
-    if (themeBtn) themeBtn.textContent = '☀ Light';
+function applyTheme(theme) {
+    if (theme === 'light') {
+        document.body.classList.add('light-mode');
+        document.body.classList.add('light-theme'); // দুই ক্লাসই একসাথে দিয়ে নিশ্চিত করা হলো
+        if (themeBtn) themeBtn.textContent = '🌙 Dark';
+    } else {
+        document.body.classList.remove('light-mode');
+        document.body.classList.remove('light-theme');
+        if (themeBtn) themeBtn.textContent = '☀ Light';
+    }
 }
 
-// বাটনে ক্লিক করলে ডার্ক ও লাইট টগল হবে
+// আগের সেভ করা থিম চেক
+const currentTheme = localStorage.getItem('satar-theme') || 'dark';
+applyTheme(currentTheme);
+
 if (themeBtn) {
     themeBtn.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        
-        if (document.body.classList.contains('light-mode')) {
-            themeBtn.textContent = '🌙 Dark';
-            localStorage.setItem('satar-theme', 'light');
-        } else {
-            themeBtn.textContent = '☀ Light';
-            localStorage.setItem('satar-theme', 'dark');
-        }
+        const isLight = document.body.classList.contains('light-mode');
+        const nextTheme = isLight ? 'dark' : 'light';
+        applyTheme(nextTheme);
+        localStorage.setItem('satar-theme', nextTheme);
     });
 }
