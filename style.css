@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
 
-/* Dark Mode Colors (Default) */
+/* Dark Mode Colors (Default: Solid Black) */
 :root {
     --bg: #000000;
     --surface: #0a0a0a;
@@ -11,8 +11,9 @@
     --text-dim: #444444;
 }
 
-/* Light Mode Colors */
-body.light-mode {
+/* Light Mode Colors (Solid White) */
+body.light-mode,
+body.light-theme {
     --bg: #ffffff;
     --surface: #f4f4f5;
     --border: #e4e4e7;
@@ -23,7 +24,8 @@ body.light-mode {
 }
 
 /* Theme Toggle Button Style */
-.theme-btn {
+.theme-btn,
+.theme-toggle-btn {
     background: transparent;
     border: 1px solid var(--border);
     color: var(--text-white);
@@ -35,7 +37,8 @@ body.light-mode {
     transition: border-color 0.2s ease, color 0.2s ease;
 }
 
-.theme-btn:hover {
+.theme-btn:hover,
+.theme-toggle-btn:hover {
     border-color: var(--border-hover);
 }
 
@@ -45,35 +48,17 @@ body.light-mode {
     box-sizing: border-box;
 }
 
-/* Engineering Grid + Subtle Radiation Texture */
+/* Solid Pure Background (No Grid / No Gradient) */
 body {
-    background-color: var(--bg);
-    color: var(--text-white);
+    background-color: var(--bg) !important;
+    background-image: none !important; /* গ্রিড পুরোপুরি রিমুভ করা হয়েছে */
+    color: var(--text-white) !important;
     font-family: 'Plus Jakarta Sans', sans-serif;
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
-    
-    /* 1. হালকা গ্রিড প্যাটার্ন (খুবই সূক্ষ্ম ৪% অপাসিটি) */
-    background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-        /* 2. নিউট্রনিক্স কোর গ্লো (সেন্টারে খুব হালকা অরা) */
-        radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
-    
-    /* গ্রিডের সাইজ (প্রতিটি বক্স 40px বাই 40px) */
-    background-size: 40px 40px, 40px 40px, 100% 100%;
-    background-attachment: fixed; /* স্ক্রল করলেও গ্রিড স্মুথ থাকবে */
-}
-
-/* লাইট মোডের জন্য গ্রিড অটোমেটিক কালো রেখায় শিফট হবে */
-body.light-theme {
-    background-image: 
-        linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-        radial-gradient(circle at 50% 15%, rgba(0, 0, 0, 0.02) 0%, transparent 60%);
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 a {
@@ -93,7 +78,7 @@ header {
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
-    background: rgba(0, 0, 0, 0.95);
+    background: var(--bg);
     backdrop-filter: blur(10px);
     z-index: 100;
 }
@@ -107,12 +92,12 @@ header {
 
 .brand {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 2.2rem !important;  /* সাইজ বড় করা হলো */
+    font-size: 2.2rem !important;  /* সাইজ বড় রাখা হয়েছে */
     font-weight: 700 !important;
     display: flex;
     align-items: center;
     gap: 13px;
-    color: #ffffff !important;
+    color: var(--text-white) !important;
 }
 
 .brand img {
@@ -123,6 +108,7 @@ header {
 
 .nav-links {
     display: flex;
+    align-items: center;
     list-style: none;
     gap: 2rem;
 }
@@ -322,7 +308,7 @@ input, textarea {
 
 input:focus, textarea:focus {
     outline: none;
-    border-color: var(--text-white);
+    border-color: var(--border-hover);
 }
 
 .btn {
@@ -351,11 +337,6 @@ footer {
     font-size: 0.85rem;
 }
 
-@media (max-width: 768px) {
-    .nav-links { gap: 1rem; font-size: 0.85rem; }
-    h1.page-title { font-size: 2.2rem; }
-    .contact-layout { grid-template-columns: 1fr; }
-}
 /* Mobile Menu Button (PC-te hide thakbe) */
 .menu-toggle {
     display: none;
@@ -375,7 +356,7 @@ footer {
     }
 
     .brand {
-        font-size: 1.25rem !important; /* Phone-e logo lekha ektu compact kora */
+        font-size: 1.35rem !important; /* Phone-e logo lekha ektu compact kora */
     }
 
     .brand img {
@@ -390,7 +371,7 @@ footer {
         top: 70px;
         left: 0;
         width: 100%;
-        background: #000000;
+        background: var(--bg);
         border-bottom: 1px solid var(--border);
         padding: 1.5rem 2rem;
         gap: 1.2rem;
@@ -399,5 +380,13 @@ footer {
     /* Button-e click korle menu open hobe */
     .nav-links.active {
         display: flex;
+    }
+
+    h1.page-title { 
+        font-size: 2.2rem; 
+    }
+    
+    .contact-layout { 
+        grid-template-columns: 1fr; 
     }
 }
