@@ -488,3 +488,37 @@ body.light-theme .btn:hover {
     background: transparent !important;
     color: #000000 !important;
 }
+/* ===================================================
+   THEME BASED DYNAMIC LOGO TOGGLE
+   =================================================== */
+.brand-logo {
+    height: 45px !important;
+    width: auto;
+    object-fit: contain;
+}
+
+/* ডিফল্ট ডার্ক মোডে ডার্ক লোগো শো করবে, লাইট লোগো হাইড থাকবে */
+.logo-dark {
+    display: block;
+}
+.logo-light {
+    display: none;
+}
+
+/* লাইট মোড অন হলে লাইট লোগো শো করবে, ডার্ক লোগো হাইড থাকবে */
+body.light-mode .logo-dark,
+body.light-theme .logo-dark {
+    display: none !important;
+}
+
+body.light-mode .logo-light,
+body.light-theme .logo-light {
+    display: block !important;
+}
+
+/* মোবাইল ভিউ সাইজ অ্যাডজাস্টমেন্ট */
+@media (max-width: 768px) {
+    .brand-logo {
+        height: 32px !important;
+    }
+}
