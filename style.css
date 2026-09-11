@@ -406,3 +406,52 @@ footer {
         grid-template-columns: 1fr; 
     }
 }
+/* ===================================================
+   LIGHT MODE OVERRIDES FOR CARDS, TEXT & PEOPLE PAGE
+   =================================================== */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode .profile-title h3,
+body.light-mode .section-label,
+body.light-mode .brand span {
+    color: #000000 !important; /* সব সাদা হেডিং কালো হবে */
+}
+
+body.light-mode .card,
+body.light-mode .profile-card,
+body.light-mode .pi-box {
+    background: #ffffff !important; /* কার্ডের ব্যাকগ্রাউন্ড পিওর হোয়াইট */
+    border-color: #e4e4e7 !important;
+}
+
+body.light-mode .profile-card:hover,
+body.light-mode .card:hover {
+    border-color: #000000 !important;
+}
+
+body.light-mode .profile-focus,
+body.light-mode .pub-meta,
+body.light-mode p {
+    color: #4b5563 !important; /* ফোকাস ও বডি টেক্সট রিডেবল ডার্ক গ্রে */
+}
+
+/* প্রোফাইল লিংক / বাটনগুলো ফিক্স */
+body.light-mode .profile-links a {
+    color: #000000 !important;
+    border-color: #d1d5db !important;
+    background: #f9fafb !important;
+}
+
+body.light-mode .profile-links a:hover {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border-color: #000000 !important;
+}
+
+/* ট্যাগ ও ব্যাজ */
+body.light-mode .tag,
+body.light-mode .badge {
+    border-color: #d1d5db !important;
+    color: #111827 !important;
+}
