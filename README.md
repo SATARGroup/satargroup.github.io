@@ -1,6 +1,6 @@
 # SATAR Group - Academic Research Website
 
-A modern, lightweight, and fully responsive static website developed for the **SATAR Research Group** (Department of Nuclear Engineering). This platform is designed to showcase research areas, publications, team members, and facilitate academic collaborations without requiring a complex backend.
+A modern, lightweight, and fully responsive static website developed for the **SATAR Group** . This platform is designed to showcase research areas, publications, team members, and facilitate academic collaborations without requiring a complex backend.
 
 ## 🚀 Features
 
