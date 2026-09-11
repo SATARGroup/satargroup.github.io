@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
 
-/* PURE MONOCHROME PALETTE */
 :root {
     --bg: #000000;
     --surface: #0a0a0a;
@@ -45,7 +44,7 @@ header {
     position: sticky;
     top: 0;
     background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
     z-index: 100;
 }
 
@@ -92,7 +91,7 @@ header {
     color: var(--text-white);
 }
 
-/* Hero Section */
+/* Hero / Intro */
 .page-intro {
     padding: 6rem 0 3rem;
 }
@@ -127,7 +126,7 @@ p.lead-text {
     font-weight: 300;
 }
 
-/* Monochrome Tags */
+/* Tags */
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -203,6 +202,97 @@ p.lead-text {
     font-size: 0.95rem;
 }
 
+/* Publications Items */
+.pub-entry {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.pub-year {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.3rem;
+    color: var(--text-white);
+    margin: 2.5rem 0 1rem;
+}
+
+.pub-title {
+    font-weight: 600;
+    color: var(--text-white);
+    margin-bottom: 0.3rem;
+}
+
+.pub-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.doi-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-white);
+    text-decoration: underline;
+}
+
+/* People / PI Box */
+.pi-box {
+    border: 1px solid var(--border);
+    padding: 2.2rem;
+    border-radius: 6px;
+    background: var(--surface);
+    margin-bottom: 3rem;
+}
+
+/* Forms & Inputs */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+}
+
+input, textarea {
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 0.8rem;
+    border-radius: 4px;
+    color: var(--text-white);
+    font-family: inherit;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--text-white);
+}
+
+.btn {
+    background: var(--text-white);
+    color: var(--bg);
+    border: 1px solid var(--text-white);
+    padding: 0.8rem 1.8rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--text-white);
+}
+
 /* Footer */
 footer {
     margin-top: auto;
@@ -216,4 +306,5 @@ footer {
 @media (max-width: 768px) {
     .nav-links { gap: 1rem; font-size: 0.85rem; }
     h1.page-title { font-size: 2.2rem; }
+    .contact-layout { grid-template-columns: 1fr; }
 }
