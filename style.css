@@ -87,7 +87,7 @@ header {
 /* Brand Logo & Larger Title */
 .brand {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.6rem; /* ফন্ট সাইজ বাড়িয়ে 1.6rem করা হয়েছে */
+    font-size: 2.5rem; /* ফন্ট সাইজ বাড়িয়ে 1.6rem করা হয়েছে */
     font-weight: 700;
     letter-spacing: -0.5px;
     display: flex;
