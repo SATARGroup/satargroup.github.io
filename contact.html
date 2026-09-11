@@ -9,32 +9,37 @@
 <body>
 
     <header>
-        <div class="container nav-container">
-            <a href="index.html" class="brand"><span class="brand-dot"></span> SATAR GROUP</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="people.html">People</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+    <div class="container nav-container">
+        <!-- Brand Logo + Text -->
+        <a href="index.html" class="brand">
+            <img src="Slogo.png" alt="SATAR Group Logo" class="brand-logo">
+            <span>SATAR Group</span>
+        </a>
+
+        
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</header>
 
     <main class="container">
         <section class="page-intro">
             <h1 class="page-title">Get in Touch</h1>
-            <p class="lead-text">Inquiries regarding graduate research positions, technical collaborations, or code access.</p>
+            <p class="lead-text">Inquiries regarding research positions, technical collaborations, or code access.</p>
         </section>
 
         <div class="contact-layout" style="margin-bottom: 4rem;">
             <div>
                 <h3 style="font-family: 'Space Grotesk', sans-serif; margin-bottom: 1rem; color: #fff;">Lab Location</h3>
                 <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
-                    SATAR Research Group<br>
                     Anywhere we sit XD!!
                 </p>
-                <h3 style="font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.5rem; color: #fff;">Email</h3>
+                <h3 style="font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.5rem; color: #fff;">E-mail</h3>
                 <p style="color: var(--text-muted);">satargroup@proton.me</p>
             </div>
 
@@ -45,11 +50,11 @@
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" required placeholder="academic@institution.edu">
+                    <input type="email" required placeholder="your_mail@something.com">
                 </div>
                 <div class="form-group">
                     <label>Message</label>
-                    <textarea rows="4" required placeholder="Your research interest or inquiry..."></textarea>
+                    <textarea rows="4" required placeholder="Maybe a cup of coffee...."></textarea>
                 </div>
                 <button type="submit" class="btn">Send Inquiry</button>
             </form>
